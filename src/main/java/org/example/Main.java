@@ -12,7 +12,6 @@ import org.example.processor.UserProcessorImpl;
 import org.example.service.StatisticsServiceImpl;
 
 public class Main {
-    private static final int THREAD_COUNT = 8;
 
     public static void main(String[] args) throws Exception {
         CommandLineArgs commandLineArgs = new CommandLineArgs(args);
@@ -20,7 +19,7 @@ public class Main {
         FileProcessorImpl fileProcessorImpl = new FileProcessorImpl();
         File[] files = fileProcessorImpl.processFiles(commandLineArgs.getDirectoryPath());
 
-        UserProcessorImpl userProcessorImpl = new UserProcessorImpl(THREAD_COUNT);
+        UserProcessorImpl userProcessorImpl = new UserProcessorImpl(commandLineArgs.getThreadCount());
         List<User> users = userProcessorImpl.processFiles(files);
 
         StatisticsServiceImpl statisticsServiceImpl = new StatisticsServiceImpl();

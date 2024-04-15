@@ -29,7 +29,7 @@ public class JsonFileReader implements Callable<List<User>> {
      */
 
     public JsonFileReader(File file) {
-        this(file, 5);
+        this(file, 10);
     }
 
     public JsonFileReader(File file, int chunkSize) {

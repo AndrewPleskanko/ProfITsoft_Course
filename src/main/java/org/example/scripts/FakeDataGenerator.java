@@ -2,6 +2,9 @@ package org.example.scripts;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -33,14 +36,15 @@ public class FakeDataGenerator {
      *
      * @param args command-line arguments (not used)
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Faker faker = new Faker();
         Random random = new Random();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
-        try (FileWriter writer = new FileWriter("usersList10.json")) {
+        Path path = Paths.get("src/main/resources/json");
+        Files.createDirectories(path);
+        try (FileWriter writer = new FileWriter(path.resolve("usersList10.json").toFile())) {
             writer.write("[");
-            IntStream.range(0, 600_000).forEach(i -> {
+            IntStream.range(0, 900_000).forEach(i -> {
                 String username = faker.name().fullName().replace(" ", "").toLowerCase(Locale.ROOT);
 
                 Collections.shuffle(CATEGORIES);
@@ -56,7 +60,7 @@ public class FakeDataGenerator {
                 String json = gson.toJson(user);
                 try {
                     writer.write(json);
-                    if (i < 600_000 - 1) {
+                    if (i < 900_000 - 1) {
                         writer.write(",");
                     }
                 } catch (IOException e) {

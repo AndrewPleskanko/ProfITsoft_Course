@@ -25,7 +25,7 @@ public class MainBenchmark {
     @BenchmarkMode(Mode.AverageTime)
     @Measurement(iterations = 5, batchSize = 1)
     public void testMainMethod() throws Exception {
-        String[] args = {"src/main/resources/json", "role"};
+        String[] args = {"-p", "src/main/resources/json", "-a", "categories", "-tc", "2"};
         Main.main(args);
     }
 

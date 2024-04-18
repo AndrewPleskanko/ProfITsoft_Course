@@ -1,3 +1,13 @@
+Used Stack:
+
+- Java 17 and Maven for development.
+- JUnit 5, AssertJ, and Mockito for testing.
+- Project Lombok and SLF4J with Logback for code simplification and logging.
+- Jackson, Commons CLI, JavaFaker, and Gson for data handling.
+- JMH for benchmarking.
+- Maven plugins (Jar, Shade, Checkstyle, PMD, Compiler, JXR) for build and code quality management.
+- JaCoCo Maven Plugin for test coverage, aiming for 80% coverage.
+
 # Setup and Running the Application
 
 Before running the application, you need to build it using Maven. This can be done by executing the following command in
@@ -13,7 +23,7 @@ directory.
 After successfully building the application, you can run it using the following command:
 
 ```
-java -jar target\custom-name.jar -p src/main/resources/json -a categories -tc 4
+java -jar target\user-json-xml-converter.jar -p src/main/resources/json -a categories -tc 4
 ```
 
 where `src/main/resources/json` is the path to the directory with JSON files and `role` is the name of the attribute for
@@ -76,32 +86,17 @@ which you need to calculate statistics.
 </statistics>
    ```
 
-# Benchmarking Results (for 1.2gb of data)
+# Benchmarking Results Input Data: 12 files with a total size of 1.2GB
 
-Our application was tested using different numbers of threads. Below are the results of these tests.
+Our application was tested using different numbers of threads. Below are the results of these tests in a tabular format:
 
-## 1 Thread
-
-With 1 thread, the average time per operation was 29.186 seconds. The error margin was ±4.627 seconds, meaning the
-actual
-time per operation could vary between 28.133 and 30.557 seconds.
-
-## 2 Threads
-
-With 2 threads, the average time per operation was 23.982 seconds. The error margin was ±1.110 seconds, meaning the
-actual time per operation could vary between 23.659 and 24.329 seconds.
-
-## 4 Threads
-
-With 4 threads, the average time per operation was 23.024 seconds. The error margin was ±4.691 seconds, meaning the
-actual time per operation could vary between 21.412 and 24.728 seconds.
-
-## 8 Threads
-
-With 8 threads, the average time per operation was 22.775 seconds. The error margin was ±2.724 seconds, meaning the
-actual time per operation could vary between 21.916 and 23.766 seconds.
+| Number of Threads | Average Time per Operation (seconds) | Error Margin (seconds) | Actual Time Range per Operation (seconds) |
+|-------------------|--------------------------------------|------------------------|-------------------------------------------|
+| 1                 | 29.186                               | ±4.627                 | 28.133 to 30.557                          |
+| 2                 | 23.982                               | ±1.110                 | 23.659 to 24.329                          |
+| 4                 | 23.024                               | ±4.691                 | 21.412 to 24.728                          |
+| 8                 | 22.775                               | ±2.724                 | 21.916 to 23.766                          |
 
 The benchmarking results indicate that the performance of the application improves slightly as the number of threads
-increases from 1 to 2, 4, and 8.
-However, the improvement is quite small, and the actual impact on performance may vary depending on other factors such
-as the specific workload and the capabilities of the hardware.
+increases from 1 to 2, 4, and 8. However, the improvement is quite small, and the actual impact on performance may vary
+depending on other

@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  * This class is responsible for writing a Statistics object to an XML file.
  */
 @Slf4j
-public class FileWriterImpl implements FileWriter {
+public class StatisticXmlFileWriterImpl implements FileWriter {
     private final XmlMapper xmlMapper = new XmlMapper();
 
     /**

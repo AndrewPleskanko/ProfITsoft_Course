@@ -11,7 +11,7 @@ import org.example.model.Statistics;
 import org.junit.jupiter.api.Test;
 
 
-public class FileWriterImplTest {
+public class StatisticXmlFileWriterImplTest {
     private static final String ATTRIBUTE_NAME = "role";
     private static final String OUTPUT_FILE_NAME = "statistics_by_" + ATTRIBUTE_NAME + ".xml";
     private static final String ADMIN_ROLE = "ADMIN";
@@ -27,10 +27,10 @@ public class FileWriterImplTest {
                 new Item(USER_ROLE, USER_COUNT)
         );
         Statistics statistics = new Statistics(items);
-        FileWriterImpl xmlFileWriterImpl = new FileWriterImpl();
+        StatisticXmlFileWriterImpl xmlStatisticXmlFileWriterImpl = new StatisticXmlFileWriterImpl();
 
         // When
-        xmlFileWriterImpl.write(statistics, ATTRIBUTE_NAME);
+        xmlStatisticXmlFileWriterImpl.write(statistics, ATTRIBUTE_NAME);
 
         // Then
         File outputFile = new File(OUTPUT_FILE_NAME);

@@ -42,13 +42,13 @@ public class FakeDataGenerator {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         Path path = Paths.get("src/main/resources/json");
         Files.createDirectories(path);
-        try (FileWriter writer = new FileWriter(path.resolve("usersList10.json").toFile())) {
+        try (FileWriter writer = new FileWriter(path.resolve("usersList31.json").toFile())) {
             writer.write("[");
             IntStream.range(0, 900_000).forEach(i -> {
                 String username = faker.name().fullName().replace(" ", "").toLowerCase(Locale.ROOT);
 
                 Collections.shuffle(CATEGORIES);
-                List<String> userCategories = CATEGORIES.subList(0, 4);
+                String userCategories = String.join(", ", CATEGORIES.subList(0, 4));
 
                 User user = new User(
                         username,

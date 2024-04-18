@@ -1,20 +1,170 @@
 [
   {
-    "username": "testUser1",
-    "email": "testUser1@example.com",
-    "password": "password1",
-    "role": "ADMIN"
+    "username": "pamilagutmanniv",
+    "email": "milo.leannon@hotmail.com",
+    "password": "4m5tqffmen5qmdu",
+    "role": "USER",
+    "categories": "sports games, sculpture, cats, AI"
   },
   {
-    "username": "testUser2",
-    "email": "testUser2@example.com",
-    "password": "password2",
-    "role": "USER"
+    "username": "hermilareinger",
+    "email": "vasiliki.mertz@hotmail.com",
+    "password": "kvihas6d",
+    "role": "ADMIN",
+    "categories": "AI, guitar, yoga, physics"
   },
   {
-    "username": "testUser3",
-    "email": "testUser3@example.com",
-    "password": "password3",
-    "role": "USER"
+    "username": "dr.blakebergnaum",
+    "email": "ka.heathcote@yahoo.com",
+    "password": "i1zaiozb1caj9a0",
+    "role": "ADMIN",
+    "categories": "blockchain, pop, yoga, rock"
+  },
+  {
+    "username": "dr.sergiobrekke",
+    "email": "rodolfo.anderson@gmail.com",
+    "password": "cfovvz6rxz8",
+    "role": "USER",
+    "categories": "football, AI, pop, birds"
+  },
+  {
+    "username": "angelyundt",
+    "email": "luciano.kemmer@hotmail.com",
+    "password": "t3jgvwcpimpd",
+    "role": "USER",
+    "categories": "birds, mountains, jazz, cats"
+  },
+  {
+    "username": "margarettagrant",
+    "email": "margareta.goodwin@yahoo.com",
+    "password": "evp23ddl58a",
+    "role": "USER",
+    "categories": "video games, sports games, mountains, jazz"
+  },
+  {
+    "username": "zoilareichert",
+    "email": "dalton.dare@gmail.com",
+    "password": "fpgacwr4n6c",
+    "role": "USER",
+    "categories": "beaches, football, running, dogs"
+  },
+  {
+    "username": "rodrickaufderharsr.",
+    "email": "dustin.schulist@gmail.com",
+    "password": "n6c4hcrko0if4p",
+    "role": "USER",
+    "categories": "football, dogs, astronomy, guitar"
+  },
+  {
+    "username": "laynecolesr.",
+    "email": "jewell.romaguera@hotmail.com",
+    "password": "f0gpsg9l",
+    "role": "USER",
+    "categories": "sports games, sculpture, AI, pop"
+  },
+  {
+    "username": "parkerwillms",
+    "email": "roman.prosacco@gmail.com",
+    "password": "bnfyjh4zbts",
+    "role": "USER",
+    "categories": "cities, video games, drawing, running"
+  },
+  {
+    "username": "yoshikohodkiewicz",
+    "email": "alvin.kutch@gmail.com",
+    "password": "ix2bbnanwy1rgn",
+    "role": "USER",
+    "categories": "painting, yoga, cooking, dogs"
+  },
+  {
+    "username": "mrs.maymebartell",
+    "email": "gavin.kub@yahoo.com",
+    "password": "1v3tp6gs",
+    "role": "ADMIN",
+    "categories": "cities, board games, pop, guitar"
+  },
+  {
+    "username": "monroekilbackmd",
+    "email": "bennie.wilkinson@gmail.com",
+    "password": "efdo11pf0h",
+    "role": "ADMIN",
+    "categories": "guitar, VR, beaches, painting"
+  },
+  {
+    "username": "donnolson",
+    "email": "rico.morissette@hotmail.com",
+    "password": "6m6nohqia6u1i8",
+    "role": "USER",
+    "categories": "VR, yoga, guitar, cats"
+  },
+  {
+    "username": "rosendowiegandphd",
+    "email": "coleman.raynor@yahoo.com",
+    "password": "5eh1dx31cl",
+    "role": "USER",
+    "categories": "VR, sculpture, AI, dogs"
+  },
+  {
+    "username": "eulamitchell",
+    "email": "letisha.bogisich@gmail.com",
+    "password": "s4pt57z0",
+    "role": "USER",
+    "categories": "video games, guitar, drawing, photography"
+  },
+  {
+    "username": "leanoramarvinsr.",
+    "email": "armida.wuckert@hotmail.com",
+    "password": "d4ok5a73xvxmt",
+    "role": "USER",
+    "categories": "cooking, blockchain, guitar, basketball"
+  },
+  {
+    "username": "raymundolubowitzi",
+    "email": "louetta.lebsack@gmail.com",
+    "password": "lq705394116",
+    "role": "USER",
+    "categories": "basketball, yoga, guitar, pop"
+  },
+  {
+    "username": "brigettebarrows",
+    "email": "cedrick.schinner@yahoo.com",
+    "password": "bk4zkqzhjc9h",
+    "role": "ADMIN",
+    "categories": "basketball, cities, guitar, biology"
+  },
+  {
+    "username": "carmondibbert",
+    "email": "jessie.hills@gmail.com",
+    "password": "l88jjj36mjpm",
+    "role": "ADMIN",
+    "categories": "biology, cats, astronomy, drawing"
+  },
+  {
+    "username": "mammieschinner",
+    "email": "cheree.kuvalis@gmail.com",
+    "password": "wu2sp0zth38sx8",
+    "role": "USER",
+    "categories": "physics, cooking, rock, birds"
+  },
+  {
+    "username": "collinpouros",
+    "email": "albert.okeefe@yahoo.com",
+    "password": "w06x9mbds1y",
+    "role": "ADMIN",
+    "categories": "sculpture, photography, basketball, beaches"
+  },
+  {
+    "username": "eilenekuphal",
+    "email": "ted.dickens@yahoo.com",
+    "password": "69ypge76",
+    "role": "ADMIN",
+    "categories": "tennis, AI, basketball, blockchain"
+  },
+  {
+    "username": "mrs.terrybogan",
+    "email": "christian.konopelski@hotmail.com",
+    "password": "5wjs3ssz6cz1qw",
+    "role": "ADMIN",
+    "categories": "football, cities, physics, mountains"
   }
 ]

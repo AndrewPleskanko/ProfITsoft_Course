@@ -106,7 +106,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>custom-name</finalName>
+        <finalName>user-json-xml-converter</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -157,9 +157,10 @@
                 <configuration>
                     <excludes>
                         <exclude>org/example/model/**/*</exclude>
-                        <exclude>org/example/Main.java</exclude>
                         <exclude>org/example</exclude>
                         <exclude>org/example/benchmark/**/*</exclude>
+                        <exclude>org/example/CustomThreadFactory.class</exclude>
+                        <exclude>org/example/scripts/**/*</exclude>
                         <exclude>org/example/Main.class</exclude>
                         <includeNoLocationClasses>true</includeNoLocationClasses>
                     </excludes>

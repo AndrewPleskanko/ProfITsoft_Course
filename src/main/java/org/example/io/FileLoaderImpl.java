@@ -1,9 +1,9 @@
-package org.example.processor;
+package org.example.io;
 
 import java.io.File;
 
 import org.example.exception.InvalidDirectoryException;
-import org.example.processor.interfaces.FileProcessor;
+import org.example.io.interfaces.FileLoader;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  * This class is responsible for processing files in a specified directory.
  */
 @Slf4j
-public class FileProcessorImpl implements FileProcessor {
+public class FileLoaderImpl implements FileLoader {
 
     /**
      * Processes files in the specified directory and returns an array of Files.
@@ -21,8 +21,7 @@ public class FileProcessorImpl implements FileProcessor {
      * @return an array of Files in the directory
      * @throws InvalidDirectoryException if the directory is empty or does not exist
      */
-    @Override
-    public File[] processFiles(String directoryPath) {
+    public File[] loadFiles(String directoryPath) {
         log.info("Processing files in directory: {}", directoryPath);
         File directory = new File(directoryPath);
         File[] files = directory.listFiles((dir, name) -> name.endsWith(".json"));
@@ -32,6 +31,7 @@ public class FileProcessorImpl implements FileProcessor {
             throw new InvalidDirectoryException("Directory is empty or does not exist");
         }
         log.info("Processed {} files in directory: {}", files.length, directoryPath);
+
         return files;
     }
 }

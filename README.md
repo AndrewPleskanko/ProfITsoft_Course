@@ -179,7 +179,7 @@ Benchmark.main            16             16   avgt    3   8.546 ± 0.231   s/op
 
 ### Use of CPU and memory
 
-![img_2.png](photo\cpu_memory_use.png)
+![img_2.png](photo/cpu_memory_use.png)  
 
 ## Conclusions:
 

@@ -6,18 +6,28 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class CommandLineArgsTest {
+    private static final String DIRECTORY_PATH = "directoryPath";
+    private static final String ATTRIBUTE_NAME = "attributeName";
+    private static final int PUBLISHERS_COUNT = 2;
+    private static final int SUBSCRIBERS_COUNT = 1;
+    private static final int QUEUE_CHUNK_SIZE = 1000;
+    private static final int QUEUE_SIZE = 100;
+
     @Test
     public void givenValidArgs_whenNewCommandLineArgs_thenCorrectAttributes() {
         // Given
-        String[] args = {"-p", "directoryPath", "-a", "attributeName", "-tc", "2"};
+        String[] args = {"-p", "directoryPath", "-a", "attributeName", "-pubs", "2"};
 
         // When
         CommandLineArgs commandLineArgs = new CommandLineArgs(args);
 
         // Then
-        assertEquals("directoryPath", commandLineArgs.getDirectoryPath());
-        assertEquals("attributeName", commandLineArgs.getAttributeName());
-        assertEquals(2, commandLineArgs.getThreadCount());
+        assertEquals(DIRECTORY_PATH, commandLineArgs.getDirectoryPath());
+        assertEquals(ATTRIBUTE_NAME, commandLineArgs.getAttributeName());
+        assertEquals(PUBLISHERS_COUNT, commandLineArgs.getPublishersCount());
+        assertEquals(SUBSCRIBERS_COUNT, commandLineArgs.getSubscribersCount());
+        assertEquals(QUEUE_CHUNK_SIZE, commandLineArgs.getQueueChunkSize());
+        assertEquals(QUEUE_SIZE, commandLineArgs.getQueueSize());
     }
 
     @Test
@@ -47,13 +57,13 @@ public class CommandLineArgsTest {
         CommandLineArgs commandLineArgs = new CommandLineArgs(args);
 
         // Then
-        assertEquals(1, commandLineArgs.getThreadCount());
+        assertEquals(SUBSCRIBERS_COUNT, commandLineArgs.getSubscribersCount());
     }
 
     @Test
     public void givenInvalidThreadCount_whenNewCommandLineArgs_thenThrowsNumberFormatException() {
         // Given
-        String[] args = {"-p", "directoryPath", "-a", "attributeName", "-tc", "invalid"};
+        String[] args = {"-p", "directoryPath", "-a", "attributeName", "-pubs", "invalid"};
 
         // When & Then
         assertThrows(NumberFormatException.class, () -> new CommandLineArgs(args));

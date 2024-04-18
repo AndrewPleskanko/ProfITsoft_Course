@@ -22,7 +22,10 @@ import lombok.extern.slf4j.Slf4j;
 public class CommandLineArgs {
     private String directoryPath;
     private String attributeName;
-    private int threadCount;
+    private int publishersCount;
+    private int subscribersCount;
+    private int queueSize;
+    private int queueChunkSize;
 
     /**
      * Constructor that parses the command line arguments.
@@ -46,7 +49,10 @@ public class CommandLineArgs {
 
         directoryPath = cmd.getOptionValue("path");
         attributeName = cmd.getOptionValue("attribute");
-        threadCount = Integer.parseInt(cmd.getOptionValue("threadCount", "1"));
+        publishersCount = Integer.parseInt(cmd.getOptionValue("pubs", "1"));
+        subscribersCount = Integer.parseInt(cmd.getOptionValue("subs", "1"));
+        queueSize = Integer.parseInt(cmd.getOptionValue("qs", "100"));
+        queueChunkSize = Integer.parseInt(cmd.getOptionValue("qcs", "1000"));
     }
 
     /**
@@ -64,9 +70,21 @@ public class CommandLineArgs {
         attributeOption.setRequired(true);
         options.addOption(attributeOption);
 
-        Option threadCountOption = new Option("tc", "threadCount", true, "thread count");
-        threadCountOption.setRequired(false);
-        options.addOption(threadCountOption);
+        Option publishersCountOption = new Option("pubs", "publishers", true, "Publisher threads count");
+        publishersCountOption.setRequired(false);
+        options.addOption(publishersCountOption);
+
+        Option subscribersCountOption = new Option("subs", "subscribers", true, "Subscriber threads count");
+        subscribersCountOption.setRequired(false);
+        options.addOption(subscribersCountOption);
+
+        Option queueSizeOption = new Option("qs", "queue_size", true, "Thread queue size");
+        queueSizeOption.setRequired(false);
+        options.addOption(queueSizeOption);
+
+        Option queueChunkSizeOption = new Option("qcs", "queue_chunk_size", true, "Thread queue chunk size");
+        queueChunkSizeOption.setRequired(false);
+        options.addOption(queueChunkSizeOption);
 
         return options;
     }

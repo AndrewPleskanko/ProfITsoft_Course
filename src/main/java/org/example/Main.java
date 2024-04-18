@@ -39,10 +39,10 @@ public class Main {
         final FileLoader fileProcessor = new FileLoaderImpl();
         final File[] files = fileProcessor.loadFiles(commandLineArgs.getDirectoryPath());
 
-        final int pubCount = 7;
-        final int subCount = commandLineArgs.getThreadCount();
-        final int queueSize = 100;
-        final int chunkSize = 1000;
+        final int pubCount = commandLineArgs.getPublishersCount();
+        final int subCount = commandLineArgs.getSubscribersCount();
+        final int queueSize = commandLineArgs.getQueueSize();
+        final int chunkSize = commandLineArgs.getQueueChunkSize();
 
         BlockingQueue<List<User>> queue = new ArrayBlockingQueue<>(queueSize);
 

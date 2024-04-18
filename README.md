@@ -32,7 +32,7 @@ which you need to calculate statistics.
 
 ## System design
 
-![img_1.png](photo/system_design.png)
+![img_1.png](images/system_design.png)
 
 The system concept, based on
 the [Publisher-Subscriber](https://dsysd-dev.medium.com/system-design-patterns-publisher-subscriber-pattern-ae281d5598f5)
@@ -114,7 +114,7 @@ can handle its own tasks independently.
 | **JVM**        | JDK 17.0_2, Java HotSpot(TM) 64-Bit Server VM, 25.261-b12 |
 | **VM Props**   | -Xms128m -Xmx4096m                                        |
 
-![img.jpg](photo/test_stand_params.jpg)
+![img.jpg](images/test_stand_params.jpg)
 
 ### Testing data:
 
@@ -179,7 +179,7 @@ Benchmark.main            16             16   avgt    3   8.546 ± 0.231   s/op
 
 ### Use of CPU and memory
 
-![img_2.png](photo/cpu_memory_use.png)  
+![img_2.png](images/cpu_memory_use.png)  
 
 ## Conclusions:
 
